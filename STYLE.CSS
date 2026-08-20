@@ -27,7 +27,7 @@ ul {
    2. COULEURS
 ===================================================== */
 
-:root{
+:root {:root{
   --primary:#0b74da;
   --dark:#0b2340;
   --muted:#6b7280;
@@ -326,7 +326,6 @@ body{margin:0;background:var(--bg);color:var(--dark);-webkit-font-smoothing:anti
   .footer-inner{flex-direction:column;gap:0.5rem;text-align:center}
 }
 
-:root {
     --vert: #00843d;
     --vert-fonce: #005c2b;
     --vert-clair: #eaf7ef;

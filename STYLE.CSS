@@ -294,7 +294,6 @@ body{margin:0;background:var(--bg);color:var(--dark);-webkit-font-smoothing:anti
 .btn.primary{background:var(--primary);color:#fff;border-color:var(--primary)}
 .btn.outline{background:transparent;color:var(--primary);border-color:var(--primary)}
 
-.section{padding:2rem 0}
 .services .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
 .service-card{background:var(--card);padding:1rem;border-radius:12px;box-shadow:0 6px 18px rgba(11,35,64,0.04)}
 .service-card h4{margin:0 0 0.5rem}

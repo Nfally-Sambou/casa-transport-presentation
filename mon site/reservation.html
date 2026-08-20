@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Réservation | CASA TRANSPORT</title>
+
+    <link rel="stylesheet" href="STYLE.CSS">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="site-header">
+
+        <div class="container header-inner">
+
+            <div class="brand">
+
+                <div class="logo">
+                    <img src="logo.jpeg" alt="Logo Casa Transport">
+                </div>
+
+                <div class="brand-text">
+                    <h1>CASA TRANSPORT</h1>
+                    <p>Transport en commun & logistique</p>
+                </div>
+
+            </div>
+
+            <nav class="main-nav">
+
+                <ul>
+
+                    <li>
+                        <a href="accueil.html">Accueil</a>
+                    </li>
+
+                    <li>
+                        <a href="apropos.html">À propos</a>
+                    </li>
+
+                    <li>
+                        <a href="service.html">Services</a>
+                    </li>
+
+                    <li>
+                        <a href="reservation.html" class="active">
+                            Réservation
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <button class="menu-btn">☰</button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="reservation-hero">
+
+            <div class="container">
+
+                <span class="hero-label">
+                    CASA TRANSPORT
+                </span>
+
+                <h2>
+                    Réservez votre transport
+                </h2>
+
+                <p>
+                    Planifiez votre trajet ou votre prestation logistique
+                    simplement et rapidement.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RESERVATION ================= -->
+
+        <section class="reservation-section">
+
+            <div class="container reservation-grid">
+
+
+                <!-- INFORMATIONS -->
+
+                <div class="reservation-info">
+
+                    <span class="section-label">
+                        RÉSERVATION
+                    </span>
+
+                    <h2>
+                        Organisez votre déplacement
+                        en toute simplicité
+                    </h2>
+
+                    <p>
+                        Remplissez le formulaire ci-contre afin de nous
+                        transmettre votre demande. Notre équipe vous
+                        contactera rapidement pour confirmer les détails
+                        de votre réservation.
+                    </p>
+
+
+                    <div class="info-item">
+
+                        <div class="info-icon">
+                            ✓
+                        </div>
+
+                        <div>
+                            <h3>Service fiable</h3>
+
+                            <p>
+                                Une équipe professionnelle à votre service.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <div class="info-icon">
+                            ✓
+                        </div>
+
+                        <div>
+                            <h3>Ponctualité</h3>
+
+                            <p>
+                                Nous accordons une grande importance au
+                                respect des horaires.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <div class="info-icon">
+                            ✓
+                        </div>
+
+                        <div>
+                            <h3>Sécurité</h3>
+
+                            <p>
+                                Votre sécurité et celle de vos marchandises
+                                sont nos priorités.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="reservation-contact">
+
+                        <strong>Besoin d'aide ?</strong>
+
+                        <p>
+                            Appelez-nous directement :
+                        </p>
+
+                        <a href="tel:+221783643913">
+                            +221 78 364 39 13
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FORMULAIRE -->
+
+                <div class="reservation-card">
+
+                    <div class="form-header">
+
+                        <h3>
+                            Demande de réservation
+                        </h3>
+
+                        <p>
+                            Remplissez les informations ci-dessous.
+                        </p>
+
+                    </div>
+
+
+                    <form
+                        class="reservation-form"
+                        action="#"
+                        method="post"
+                    >
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="nom">
+                                    Nom complet
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="nom"
+                                    name="nom"
+                                    placeholder="Votre nom complet"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="contact">
+                                    Téléphone / Email
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="contact"
+                                    name="contact"
+                                    placeholder="Votre téléphone ou email"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="service">
+                                    Type de service
+                                </label>
+
+                                <select
+                                    id="service"
+                                    name="service"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Choisissez un service
+                                    </option>
+
+                                    <option value="commun">
+                                        Transport en commun
+                                    </option>
+
+                                    <option value="logistique">
+                                        Transport logistique
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="datetime">
+                                    Date & heure
+                                </label>
+
+                                <input
+                                    type="datetime-local"
+                                    id="datetime"
+                                    name="datetime"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="details">
+                                Adresse / Détails de la demande
+                            </label>
+
+                            <textarea
+                                id="details"
+                                name="details"
+                                rows="5"
+                                placeholder="Indiquez votre adresse, destination ou toute autre information..."
+                            ></textarea>
+
+                        </div>
+
+
+                        <div class="form-check">
+
+                            <input
+                                type="checkbox"
+                                id="conditions"
+                                required
+                            >
+
+                            <label for="conditions">
+                                Je confirme que les informations fournies
+                                sont correctes.
+                            </label>
+
+                        </div>
+
+
+                        <div class="form-actions">
+
+                            <button
+                                type="submit"
+                                class="btn-primary"
+                            >
+                                Envoyer la demande
+                            </button>
+
+                            <button
+                                type="reset"
+                                class="btn-secondary"
+                            >
+                                Réinitialiser
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+
+            <div class="footer-col">
+
+                <h3>CASA TRANSPORT</h3>
+
+                <p>
+                    Votre partenaire de confiance pour le transport
+                    en commun et le transport logistique, offrant des
+                    services fiables, ponctuels et sécurisés.
+                </p>
+
+            </div>
+
+
+            <div class="footer-col footer-links">
+
+                <h3>LIENS UTILES</h3>
+
+                <a href="accueil.html">Accueil</a>
+
+                <a href="apropos.html">À propos</a>
+
+                <a href="service.html">Services</a>
+
+                <a href="reservation.html">Réservation</a>
+
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h3>CONTACTEZ-NOUS</h3>
+
+                <p>CASA TRANSPORT</p>
+
+                <p>Dakar, Sénégal</p>
+
+                <p>Rue 54 avenue des sciences</p>
+
+                <p>+221 78 364 39 13</p>
+
+                <p>+221 70 762 08 23</p>
+
+                <p>+221 77 825 14 35</p>
+
+                <p>casatransport@gmail.com</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 CASA TRANSPORT — TOUS DROITS RÉSERVÉS.
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>

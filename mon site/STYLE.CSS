@@ -1,0 +1,3864 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #222222;
+    line-height: 1.6;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+/* =====================================================
+   2. COULEURS
+===================================================== */
+
+:root{
+  --primary:#0b74da;
+  --dark:#0b2340;
+  --muted:#6b7280;
+  --bg:#f7f9fb;
+  --card:#ffffff;
+  --radius:10px;
+  --container:1100px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--dark);-webkit-font-smoothing:antialiased}
+.container{max-width:var(--container);margin:0 auto;padding:1rem}
+
+.site-header{background:linear-gradient(90deg, #ffffffcc, #ffffff);backdrop-filter: blur(4px);border-bottom:1px solid rgba(11,35,64,0.06);position:sticky;top:0;z-index:20}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.75rem 0}
+.brand{display:flex;align-items:center;gap:0.75rem}
+.logo{width:52px;height:52px;border-radius:10px;background:var(--primary);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+.brand h1{margin:0;font-size:1.05rem}
+.tag{margin:0;color:var(--muted);font-size:0.85rem}
+
+.main-nav{display:flex;gap:0.75rem;align-items:center}
+.main-nav a{color:var(--dark);text-decoration:none;padding:0.4rem 0.6rem;border-radius:6px;font-weight:600}
+.main-nav a.active, .main-nav a:hover{background:rgba(11,116,218,0.08);color:var(--primary)}
+
+.menu-btn{display:none;background:none;border:0;font-size:1.25rem}
+
+.hero{
+    height:100vh;
+    background-image:url('casa8.jpeg');
+    background-size:cover;
+    background-position:center;
+}
+.hero-grid{
+    display:grid;
+    grid-template-columns:1fr 420px;
+    gap:2rem;
+    align-items:center;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+}
+
+.hero-text h2{
+    margin:0 0 0.5rem;
+    font-size:2rem;
+    color:#fff;
+}
+.hero-text p{
+    color:#fff;
+    margin:0 0 1rem
+}
+
+/* ================================
+   SECTION À PROPOS - CASA TRANSPORT
+================================ */
+
+.about-section {
+  padding: 90px 20px;
+  background: #f5f7fa;
+}
+
+.about-section .container {
+  max-width: 1150px;
+  margin: auto;
+}
+
+/* En-tête */
+
+.about-header {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.about-subtitle {
+  display: inline-block;
+  color: #0b5ed7;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.about-header h2 {
+  margin: 0;
+  font-size: 42px;
+  color: #172033;
+  font-weight: 800;
+}
+
+.about-line {
+  width: 65px;
+  height: 4px;
+  background: #0b5ed7;
+  margin: 18px auto;
+  border-radius: 10px;
+}
+
+.about-header p {
+  color: #6b7280;
+  font-size: 17px;
+  margin: 0;
+}
+
+/* Contenu */
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+/* Texte */
+
+.about-text h3 {
+  font-size: 28px;
+  color: #172033;
+  margin-bottom: 20px;
+}
+
+.about-text > p {
+  color: #5f6877;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+.about-text strong {
+  color: #0b5ed7;
+}
+
+/* Valeurs */
+
+.about-values {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.value-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #ffffff;
+  padding: 17px 20px;
+  border-radius: 10px;
+  border-left: 4px solid #0b5ed7;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.value-box > span {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0b5ed7;
+  color: white;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.value-box h4 {
+  margin: 0 0 4px;
+  color: #172033;
+  font-size: 17px;
+}
+
+.value-box p {
+  margin: 0;
+  color: #777f8c;
+  font-size: 14px;
+}
+
+/* Carte engagement */
+
+.about-card {
+  background: #0b5ed7;
+  color: white;
+  padding: 45px 35px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(11, 94, 215, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-card::before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  top: -80px;
+  right: -70px;
+}
+
+.about-card-icon {
+  font-size: 55px;
+  margin-bottom: 15px;
+}
+
+.about-card h3 {
+  font-size: 27px;
+  margin-bottom: 15px;
+}
+
+.about-card p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 30px;
+}
+
+/* Bouton */
+
+.about-btn {
+  display: inline-block;
+  padding: 13px 28px;
+  background: white;
+  color: #0b5ed7;
+  text-decoration: none;
+  border-radius: 7px;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.about-btn:hover {
+  background: #172033;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Responsive téléphone */
+
+@media (max-width: 768px) {
+
+  .about-section {
+    padding: 60px 15px;
+  }
+
+  .about-header h2 {
+    font-size: 32px;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .about-text h3 {
+    font-size: 24px;
+  }
+
+  .about-card {
+    padding: 35px 25px;
+  }
+}
+
+.btn{display:inline-block;padding:0.6rem 1rem;border-radius:10px;text-decoration:none;font-weight:600;border:2px solid transparent}
+.btn.primary{background:var(--primary);color:#fff;border-color:var(--primary)}
+.btn.outline{background:transparent;color:var(--primary);border-color:var(--primary)}
+
+.section{padding:2rem 0}
+.services .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
+.service-card{background:var(--card);padding:1rem;border-radius:12px;box-shadow:0 6px 18px rgba(11,35,64,0.04)}
+.service-card h4{margin:0 0 0.5rem}
+.reservation-form{background:var(--card);padding:1rem;border-radius:12px;box-shadow:0 6px 18px rgba(11,35,64,0.04)}
+.reservation-form .row{display:flex;gap:1rem}
+.reservation-form label{display:block;font-size:0.9rem;color:var(--dark);margin-bottom:0.5rem;width:100%}
+.reservation-form input, .reservation-form select, .reservation-form textarea{width:100%;padding:0.6rem;border-radius:8px;border:1px solid #e6e9ee;background:#fff;font-size:0.95rem}
+
+.form-actions{display:flex;gap:0.5rem;margin-top:0.75rem}
+
+.site-footer{padding:1rem 0;background:transparent;border-top:1px solid rgba(11,35,64,0.04)}
+.footer-inner{display:flex;justify-content:space-between;align-items:center}
+.socials a{text-decoration:none;color:var(--muted);margin-left:0.5rem;font-weight:700}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:1.5rem}
+  .hero-image{height:180px}
+  .services .service-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media (max-width:640px){
+  .header-inner{padding:0.5rem}
+  .main-nav{position:absolute;top:64px;right:0;background:var(--card);flex-direction:column;padding:0.5rem;border-radius:8px;display:none;box-shadow:0 8px 24px rgba(11,35,64,0.08)}
+  .main-nav.open{display:flex}
+  .menu-btn{display:block}
+  .services .service-grid{grid-template-columns:1fr}
+  .reservation-form .row{flex-direction:column}
+  .footer-inner{flex-direction:column;gap:0.5rem;text-align:center}
+}
+
+:root {
+    --vert: #00843d;
+    --vert-fonce: #005c2b;
+    --vert-clair: #eaf7ef;
+    --blanc: #ffffff;
+    --gris: #666666;
+    --gris-clair: #f5f5f5;
+    --bordure: #dddddd;
+    --noir: #222222;
+}
+/* =====================================================
+   3. CONTENEUR
+===================================================== */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* =====================================================
+   4. HEADER
+===================================================== */
+
+header {
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 4px solid var(--vert);
+}
+.header-container {
+    width: 90%;
+    max-width: 1200px;
+    min-height: 85px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* =====================================================
+   5. LOGO
+===================================================== */
+
+.logo img {
+    width: 200px;
+    height: auto;
+    display: block;
+}
+.logo h1 {
+    color: var(--vert-fonce);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--vert);
+}
+
+.logo p {
+    color: var(--gris);
+    font-size: 15px;
+}
+/* =====================================================
+   6. MENU
+===================================================== */
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+nav ul li a {
+    color: var(--vert-fonce);
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 5px;
+    transition: 0.3s;
+}
+nav ul li a:hover {
+    color: var(--vert);
+}
+
+nav ul li a.active {
+    color: var(--vert);
+    border-bottom: 3px solid var(--vert);
+}
+/* =====================================================
+   7. BOUTONS
+===================================================== */
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+
+    border-radius: 6px;
+    border: none;
+
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+/* Bouton vert */
+
+.btn-vert {
+    background-color: var(--vert);
+    color: #ffffff;
+}
+
+.btn-vert:hover {
+    background-color: var(--vert-fonce);
+}
+/* Bouton blanc */
+
+.btn-blanc {
+    background-color: #ffffff;
+    color: var(--vert);
+
+    border: 2px solid #ffffff;
+}
+
+.btn-blanc:hover {
+    background-color: var(--vert);
+    color: #ffffff;
+}
+/* =====================================================
+   8. TITRES
+===================================================== */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+.section-title h2 {
+    color: var(--vert-fonce);
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+.section-title h2 span {
+    color: var(--vert);
+}
+
+.section-title p {
+    color: var(--gris);
+}
+/* =====================================================
+   9. ACCUEIL - HERO
+===================================================== */
+/* =========================================
+   PAGE ACCUEIL
+   CASA TRANSPORT
+   VERT & BLANC
+========================================= */
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.accueil-hero {
+
+    min-height: 600px;
+
+    display: flex;
+
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #064b2d,
+            #087443
+        );
+
+    color: white;
+
+    padding: 80px 20px;
+}
+
+
+.accueil-hero-content {
+
+    max-width: 850px;
+
+    margin: auto;
+}
+
+
+.hero-label {
+
+    color: #c7f2d6;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+
+.accueil-hero h2 {
+
+    font-size: 58px;
+
+    line-height: 1.15;
+
+    margin: 20px 0;
+}
+
+
+.accueil-hero p {
+
+    max-width: 720px;
+
+    margin: auto;
+
+    color: #e6f6ed;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   BOUTONS HERO
+========================================= */
+
+.hero-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 35px;
+}
+
+
+.btn-primary {
+
+    display: inline-block;
+
+    background: white;
+
+    color: #087443;
+
+    padding: 15px 28px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+.btn-primary:hover {
+
+    background: #e8f7ee;
+
+    transform: translateY(-3px);
+}
+
+
+.btn-outline {
+
+    display: inline-block;
+
+    background: transparent;
+
+    color: white;
+
+    border: 2px solid white;
+
+    padding: 13px 28px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+.btn-outline:hover {
+
+    background: white;
+
+    color: #087443;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   PRÉSENTATION
+========================================= */
+
+.accueil-presentation {
+
+    background: white;
+
+    padding: 90px 0;
+}
+
+
+.presentation-title {
+
+    max-width: 750px;
+
+    margin: auto;
+
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+
+.presentation-title span {
+
+    color: #087443;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+
+.presentation-title h2 {
+
+    color: #173b2a;
+
+    font-size: 38px;
+
+    margin: 15px 0;
+}
+
+
+.presentation-title p {
+
+    color: #718078;
+
+    line-height: 1.8;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   CARTES
+========================================= */
+
+.accueil-cards {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.accueil-card {
+
+    background: #f8fbf9;
+
+    border:
+        1px solid #e0ebe4;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+
+.accueil-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: #087443;
+
+    box-shadow:
+        0 15px 35px
+        rgba(0, 70, 40, 0.12);
+}
+
+
+/* =========================================
+   ICÔNES
+========================================= */
+
+.accueil-icon {
+
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #087443;
+    color: white;
+    overflow: hidden;
+    border-radius: 50%;
+    font-size: 30px;
+}
+
+.accueil-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.accueil-card h3 {
+
+    color: #173b2a;
+
+    font-size: 21px;
+
+    margin-bottom: 13px;
+}
+
+
+.accueil-card p {
+
+    color: #718078;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+
+.accueil-card a {
+
+    color: #087443;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+.accueil-card a:hover {
+
+    color: #064b2d;
+
+    padding-left: 5px;
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.accueil-cta {
+
+    background:
+        linear-gradient(
+            135deg,
+            #087443,
+            #064b2d
+        );
+
+    color: white;
+
+    text-align: center;
+
+    padding: 80px 20px;
+}
+
+
+.accueil-cta span {
+
+    color: #c7f2d6;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+
+.accueil-cta h2 {
+
+    font-size: 38px;
+
+    margin: 15px 0;
+}
+
+
+.accueil-cta p {
+
+    color: #e1f3e8;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+
+.btn-cta {
+
+    display: inline-block;
+
+    background: white;
+
+    color: #087443;
+
+    padding: 15px 30px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+.btn-cta:hover {
+
+    background: #e8f7ee;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   RESPONSIVE TABLETTE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .accueil-cards {
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .accueil-hero {
+
+        min-height: 520px;
+
+        padding: 60px 15px;
+    }
+
+
+    .accueil-hero h2 {
+
+        font-size: 38px;
+    }
+
+
+    .accueil-hero p {
+
+        font-size: 15px;
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    .btn-primary {
+        color: #10c068;
+        width: 100%;
+        text-align: center;
+    }
+    .btn-outline {
+
+        width: 90%;
+
+        text-align: center;
+    }
+
+
+    .accueil-presentation {
+
+        padding: 65px 0;
+    }
+
+
+    .presentation-title h2 {
+
+        font-size: 29px;
+    }
+
+
+    .accueil-cards {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .accueil-cta {
+
+        padding: 65px 20px;
+    }
+
+
+    .accueil-cta h2 {
+
+        font-size: 30px;
+    }
+
+
+    .btn-cta {
+
+        width: 100%;
+
+        text-align: center;
+    }
+
+}
+.hero {
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            rgba(0, 92, 43, 0.88),
+            rgba(0, 132, 61, 0.75)
+        ),
+        url("images/camion.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+.hero-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    color: #ffffff;
+}
+
+.hero-content h1 {
+    font-size: 60px;
+    line-height: 1.1;
+}
+.hero-content h1 span {
+    color: #ffffff;
+}
+
+.hero-content h2 {
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+.hero-content p {
+    max-width: 650px;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+/* =====================================================
+   10. PRÉSENTATION ACCUEIL
+===================================================== */
+
+.presentation {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.presentation-content {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.presentation-content h2 {
+    color: var(--vert-fonce);
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+.presentation-content p {
+    color: var(--gris);
+    margin-bottom: 15px;
+}
+/* =====================================================
+   11. VÉHICULES
+===================================================== */
+
+.vehicules {
+    padding: 80px 0;
+    background-color: var(--gris-clair);
+}
+
+.vehicules-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+/* Carte véhicule */
+
+.vehicule {
+    display: flex;
+    align-items: center;
+
+    background-color: #ffffff;
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    border-top: 5px solid var(--vert);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+}
+.vehicule-image {
+    width: 50%;
+}
+
+.vehicule-image img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.vehicule-info {
+    width: 50%;
+    padding: 25px;
+}
+
+.vehicule-info h3 {
+    color: var(--vert-fonce);
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+.vehicule-info h4 {
+    color: var(--vert);
+    margin-bottom: 10px;
+}
+
+.vehicule-info p {
+    color: var(--gris);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* =====================================================
+   12. BANNIÈRE DES PAGES
+===================================================== */
+
+.page-banner {
+    min-height: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            rgba(0, 92, 43, 0.90),
+            rgba(0, 132, 61, 0.80)
+        ),
+        url("images/camion.jpg");
+         background-size: cover;
+    background-position: center;
+}
+.page-banner h1 {
+    font-size: 50px;
+}
+
+.page-banner p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+/* =====================================================
+   13. À PROPOS
+===================================================== */
+
+.about-page {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.about-content {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-content h2 {
+    color: var(--vert-fonce);
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+.about-content p {
+    color: var(--gris);
+    margin-bottom: 15px;
+}
+
+
+/* Mission et vision */
+
+.mission {
+    padding: 80px 0;
+    background-color: var(--gris-clair);
+}
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+.mission-card {
+    background-color: #ffffff;
+
+    padding: 35px;
+
+    border-radius: 10px;
+
+    border-top: 5px solid var(--vert);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+.mission-card h3 {
+    color: var(--vert-fonce);
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.mission-card p {
+    color: var(--gris);
+}
+/* =========================================
+   PAGE À PROPOS
+   CASA TRANSPORT
+   VERT & BLANC
+========================================= */
+
+
+/* =========================================
+   HERO À PROPOS
+========================================= */
+
+.apropos-hero {
+    height: 40vh;
+    background-image: url("casa6.jpeg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+.apropos-hero .container {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    color: white;
+    height: 100%;
+}
+
+.apropos-hero span {
+
+    color: #c7f2d6;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+
+.apropos-hero h2 {
+
+    font-size: 42px;
+
+    margin: 15px 0;
+}
+
+
+.apropos-hero p {
+
+    color: #e6f6ed;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   SECTION PRÉSENTATION
+========================================= */
+
+.apropos-section {
+
+    background: #ffffff;
+
+    padding: 90px 0;
+}
+
+
+.apropos-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1.3fr 0.8fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/* =========================================
+   TEXTE
+========================================= */
+
+.apropos-info {
+
+    padding-right: 20px;
+}
+
+
+.section-label {
+
+    color: #087443;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+.apropos-info h2 {
+
+    color: #173b2a;
+
+    font-size: 38px;
+
+    line-height: 1.25;
+
+    margin: 15px 0 25px;
+}
+
+
+.apropos-info p {
+
+    color: #68766e;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+}
+
+
+.apropos-info strong {
+
+    color: #087443;
+}
+
+
+/* =========================================
+   CARTE NOTRE ENGAGEMENT
+========================================= */
+
+.apropos-card {
+
+    background:
+        linear-gradient(
+            135deg,
+            #087443,
+            #064b2d
+        );
+
+    color: white;
+
+    padding: 50px 35px;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 80, 45, 0.20);
+
+    transition: 0.3s;
+}
+
+
+.apropos-card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 20px 45px
+        rgba(0, 80, 45, 0.25);
+}
+
+
+.apropos-icon {
+
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+
+.apropos-card h3 {
+
+    font-size: 27px;
+
+    margin-bottom: 15px;
+}
+
+
+.apropos-card p {
+
+    color: #e0f4e7;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   SECTION VALEURS
+========================================= */
+
+.valeurs-section {
+
+    background: #f5f8f6;
+
+    padding: 90px 0;
+}
+
+
+/* =========================================
+   TITRE
+========================================= */
+
+.section-title {
+
+    text-align: center;
+
+    max-width: 750px;
+
+    margin:
+        0 auto 50px;
+}
+
+
+.section-title span {
+
+    color: #087443;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+.section-title h2 {
+
+    color: #173b2a;
+
+    font-size: 36px;
+
+    margin: 15px 0;
+}
+
+
+.section-title p {
+
+    color: #718078;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   CARTES VALEURS
+========================================= */
+
+.valeurs-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.valeur-card {
+
+    background: #ffffff;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    border-radius: 12px;
+
+    border:
+        1px solid #e0ebe4;
+
+    transition: 0.3s;
+}
+
+
+.valeur-card:hover {
+
+    transform: translateY(-7px);
+
+    border-color: #087443;
+
+    box-shadow:
+        0 15px 35px
+        rgba(0, 70, 40, 0.10);
+}
+
+
+/* =========================================
+   ICÔNES VALEURS
+========================================= */
+
+.valeur-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    margin:
+        0 auto 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #087443;
+
+    color: white;
+
+    font-size: 23px;
+
+    font-weight: bold;
+}
+
+
+.valeur-card h3 {
+
+    color: #173b2a;
+
+    font-size: 21px;
+
+    margin-bottom: 12px;
+}
+
+
+.valeur-card p {
+
+    color: #718078;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   RESPONSIVE TABLETTE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .apropos-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .apropos-info {
+
+        padding-right: 0;
+    }
+
+    .valeurs-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE TÉLÉPHONE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .apropos-hero {
+
+        padding: 55px 15px;
+    }
+
+    .apropos-hero h2 {
+
+        font-size: 32px;
+    }
+
+    .apropos-hero p {
+
+        font-size: 15px;
+    }
+
+    .apropos-section {
+
+        padding: 65px 0;
+    }
+
+    .apropos-info h2 {
+
+        font-size: 29px;
+    }
+
+    .apropos-card {
+
+        padding: 40px 25px;
+    }
+
+    .valeurs-section {
+
+        padding: 65px 0;
+    }
+
+    .section-title h2 {
+
+        font-size: 29px;
+    }
+
+}
+/* =====================================================
+   14. SERVICES
+===================================================== */
+
+.services {
+    padding: 80px 0;
+    background-color: var(--gris-clair);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background-color: #ffffff;
+
+    padding: 30px;
+
+    border-radius: 10px;
+        border-top: 5px solid var(--vert);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+.service-card:hover {
+    transform: translateY(-5px);
+    border-top-color: var(--vert-fonce);
+}
+
+.service-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    color: var(--vert-fonce);
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: var(--gris);
+}
+/* =========================================
+   PAGE SERVICES
+   CASA TRANSPORT
+   DESIGN VERT & BLANC
+========================================= */
+
+
+/* =========================================
+   HERO SERVICES
+========================================= */
+
+.services-hero {
+    height: 45vh;
+    background-image: url("casa2.jpeg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.services-hero .container {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    color: white;
+    height: 100%;
+}
+
+.services-hero span {
+
+    color: #c7f2d6;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+
+.services-hero h2 {
+
+    font-size: 42px;
+
+    margin: 15px 0;
+}
+
+
+.services-hero p {
+
+    color: #e6f6ed;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   SECTION SERVICES
+========================================= */
+
+.services-section {
+
+    background: #f5f8f6;
+
+    padding: 90px 0;
+}
+
+
+.services-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================================
+   CARTE SERVICE
+========================================= */
+
+.service-card {
+
+    background: white;
+
+    border:
+        1px solid #e0ebe4;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 70, 40, 0.06);
+}
+
+
+.service-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: #087443;
+
+    box-shadow:
+        0 18px 40px
+        rgba(0, 70, 40, 0.13);
+}
+
+
+/* =========================================
+   ICÔNE
+========================================= */
+
+.service-icon {
+
+    height: 150px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #087443,
+            #064b2d
+        );
+
+    color: white;
+
+    font-size: 58px;
+}
+
+
+/* =========================================
+   CONTENU
+========================================= */
+
+.service-content {
+
+    padding: 30px;
+}
+
+
+.service-number {
+
+    color: #087443;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+.service-content h3 {
+
+    color: #173b2a;
+
+    font-size: 23px;
+
+    margin: 12px 0 15px;
+}
+
+
+.service-content p {
+
+    color: #718078;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+
+.service-content a {
+
+    display: inline-block;
+
+    color: #087443;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+.service-content a:hover {
+
+    color: #064b2d;
+
+    transform: translateX(5px);
+}
+
+
+/* =========================================
+   SECTION CTA
+========================================= */
+
+.services-cta {
+
+    background: white;
+
+    padding: 80px 20px;
+
+    text-align: center;
+}
+
+
+.services-cta-content {
+
+    max-width: 750px;
+
+    margin: auto;
+}
+
+
+.services-cta-content > span {
+
+    color: #087443;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+
+.services-cta-content h2 {
+
+    color: #173b2a;
+
+    font-size: 36px;
+
+    margin: 15px 0;
+}
+
+
+.services-cta-content p {
+
+    color: #718078;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   BOUTON
+========================================= */
+
+.btn-service {
+
+    display: inline-block;
+
+    background: #087443;
+
+    color: white;
+
+    padding: 14px 28px;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.btn-service:hover {
+
+    background: #064b2d;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(0, 70, 40, 0.18);
+}
+
+
+/* =========================================
+   RESPONSIVE TABLETTE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .services-grid {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE TÉLÉPHONE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .services-hero {
+
+        padding: 55px 15px;
+    }
+
+    .services-hero h2 {
+
+        font-size: 32px;
+    }
+
+    .services-hero p {
+
+        font-size: 15px;
+    }
+
+    .services-section {
+
+        padding: 65px 0;
+    }
+
+    .services-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .service-icon {
+
+        height: 130px;
+
+        font-size: 50px;
+    }
+
+    .service-content {
+
+        padding: 25px;
+    }
+
+    .services-cta {
+
+        padding: 65px 20px;
+    }
+
+    .services-cta-content h2 {
+
+        font-size: 29px;
+    }
+
+    .btn-service {
+
+        width: 100%;
+
+        text-align: center;
+    }
+
+}
+/* =====================================================
+   15. RÉSERVATION
+===================================================== */
+
+.reservation {
+    padding: 80px 0;
+    background-color: var(--gris-clair);
+}
+
+.reservation-container {
+    max-width: 1000px;
+    margin: auto;
+}
+/* Formulaire */
+
+.reservation-form {
+    background-color: #02841e;
+
+    padding: 40px;
+
+    border-radius: 10px;
+
+    border-top: 5px solid var(--vert);
+
+    box-shadow: 0 8px 25px rgba(6, 143, 24, 0.08);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    display: block;
+
+    color: var(--vert-fonce);
+
+    font-weight: bold;
+
+    margin-bottom: 7px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid var(--bordure);
+
+    border-radius: 5px;
+
+    outline: none;
+
+    font-size: 15px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--vert);
+}
+.form-group textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+/* =====================================================
+   16. TABLEAU TRANSPORT EN COMMUN
+===================================================== */
+
+.transport-table-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+
+    background-color: #ffffff;
+
+    border-radius: 10px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+}
+.transport-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 850px;
+}
+/* En-tête */
+
+.transport-table thead {
+    background-color: var(--vert-fonce);
+    color: #ffffff;
+}
+
+.transport-table th {
+    padding: 16px 12px;
+
+    text-align: center;
+
+    font-size: 15px;
+
+    border: 1px solid var(--vert);
+}
+/* Cellules */
+
+.transport-table td {
+    padding: 14px 12px;
+
+    text-align: center;
+
+    border: 1px solid var(--bordure);
+
+    color: #333333;
+
+    background-color: #ffffff;
+}
+
+
+/* Une ligne sur deux */
+
+.transport-table tbody tr:nth-child(even) td {
+    background-color: var(--vert-clair);
+}
+
+
+/* Survol */
+
+.transport-table tbody tr:hover td {
+    background-color: #d5f0df;
+}
+
+
+/* Heure */
+
+.transport-table .heure {
+    color: var(--vert-fonce);
+    font-weight: bold;
+}
+
+
+/* Destination */
+
+.transport-table .destination {
+    color: var(--vert);
+    font-weight: bold;
+}
+
+
+/* Tarif */
+
+.transport-table .tarif {
+    color: var(--vert-fonce);
+    font-weight: bold;
+}
+
+
+/* Places */
+
+.transport-table .places {
+    color: var(--vert);
+    font-weight: bold;
+}
+
+
+/* Bouton du tableau */
+
+.table-reserver {
+    display: inline-block;
+
+    padding: 8px 14px;
+
+    background-color: var(--vert);
+
+    color: #ffffff;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.table-reserver:hover {
+    background-color: var(--vert-fonce);
+}
+/* ==================================================
+   CASA TRANSPORT
+   DESIGN VERT & BLANC
+================================================== */
+
+
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f8f6;
+    color: #173b2a;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* ================= HEADER ================= */
+
+.site-header {
+    background: #ffffff;
+    border-bottom: 1px solid #e2ebe5;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-inner {
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+/* LOGO */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.brand-text h1 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #087443;
+    letter-spacing: 1px;
+}
+
+.brand-text p {
+    font-size: 13px;
+    color: #718078;
+    margin-top: 4px;
+}
+
+
+/* ================= NAVIGATION ================= */
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.main-nav a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #30483b;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.main-nav a:hover {
+    color: #087443;
+    background: #eef8f2;
+}
+
+.main-nav a.active {
+    background: #087443;
+    color: #ffffff;
+}
+
+
+/* MENU */
+
+.menu-btn {
+    display: none;
+    border: none;
+    background: #087443;
+    color: white;
+    font-size: 22px;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+
+/* ================= HERO ================= */
+
+.reservation-hero {
+    height: 45vh;
+    background-image: url("casa3.jpeg");
+    background-size: cover;
+    background-position: center;
+    text-align: center; 
+}
+.reservation-hero .container {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    color: white;
+    height: 100%;
+}
+
+.hero-label {
+    display: inline-block;
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #b8f2ce;
+}
+
+.reservation-hero h2 {
+
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+.reservation-hero
+
+.reservation-hero p {
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.7;
+    font-size: 17px;
+    color: #e8f7ee;
+}
+
+
+/* ================= RESERVATION ================= */
+
+.reservation-section {
+    padding: 85px 0;
+}
+
+.reservation-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.2fr;
+    gap: 60px;
+    align-items: start;
+}
+
+
+/* ================= INFORMATION ================= */
+
+.reservation-info {
+    padding-top: 15px;
+}
+
+.section-label {
+    color: #087443;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.reservation-info h2 {
+    font-size: 35px;
+    line-height: 1.25;
+    margin: 15px 0 20px;
+    color: #173b2a;
+}
+
+.reservation-info > p {
+    color: #68766e;
+    line-height: 1.8;
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+
+/* ================= INFO ITEMS ================= */
+
+.info-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 24px;
+}
+
+.info-icon {
+    flex-shrink: 0;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #087443;
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.info-item h3 {
+    font-size: 17px;
+    margin-bottom: 5px;
+    color: #173b2a;
+}
+
+.info-item p {
+    color: #718078;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* ================= CONTACT ================= */
+
+.reservation-contact {
+    margin-top: 35px;
+    padding: 22px;
+
+    background: #ffffff;
+
+    border-left: 4px solid #087443;
+
+    border-radius: 8px;
+
+    box-shadow: 0 5px 20px rgba(0, 70, 40, 0.07);
+}
+
+.reservation-contact strong {
+    font-size: 17px;
+    color: #173b2a;
+}
+
+.reservation-contact p {
+    margin: 7px 0;
+    color: #718078;
+}
+
+.reservation-contact a {
+    text-decoration: none;
+    color: #087443;
+    font-weight: 700;
+}
+
+
+/* ================= FORM CARD ================= */
+
+.reservation-card {
+    background: #ffffff;
+
+    border-radius: 16px;
+
+    padding: 40px;
+
+    box-shadow: 0 15px 45px rgba(0, 70, 40, 0.10);
+
+    border: 1px solid #e0ebe4;
+}
+
+.form-header {
+    margin-bottom: 30px;
+}
+
+.form-header h3 {
+    font-size: 26px;
+    color: #173b2a;
+    margin-bottom: 8px;
+}
+
+.form-header p {
+    color: #7a867f;
+    font-size: 14px;
+}
+
+
+/* ================= FORM ================= */
+
+.reservation-form {
+    width: 100%;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #30483b;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    border: 1px solid #d7e4dc;
+
+    background: #fafcfb;
+
+    padding: 14px 15px;
+
+    border-radius: 7px;
+
+    outline: none;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    color: #173b2a;
+
+    transition: 0.3s;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    border-color: #087443;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 3px rgba(8, 116, 67, 0.10);
+}
+
+
+/* ================= CHECKBOX ================= */
+
+.form-check {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin: 5px 0 25px;
+}
+
+.form-check input {
+    margin-top: 3px;
+    accent-color: #087443;
+}
+
+.form-check label {
+    font-size: 13px;
+
+    color: #68766e;
+
+    line-height: 1.5;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-primary,
+.btn-secondary {
+
+    border: none;
+
+    padding: 14px 25px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+
+/* BOUTON VERT */
+
+.btn-primary {
+    background: #087443;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: #064b2d;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 20px rgba(8, 116, 67, 0.25);
+}
+
+
+/* BOUTON BLANC */
+
+.btn-secondary {
+    background: #ffffff;
+
+    color: #087443;
+
+    border: 1px solid #087443;
+}
+
+.btn-secondary:hover {
+    background: #eef8f2;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+
+    background: #063c25;
+
+    color: white;
+
+    margin-top: 30px;
+}
+
+.footer-container {
+
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr 1fr 1.2fr;
+
+    gap: 70px;
+
+    padding: 65px 0;
+}
+
+.footer-col h3 {
+
+    font-size: 17px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.footer-col p {
+    color: #c4d7cc;
+    font-size: 14px;
+    line-height: 1.8;
+
+    margin-bottom: 7px;
+}
+
+
+/* ================= FOOTER LINKS ================= */
+
+.footer-links {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.footer-links a {
+
+    color: #c4d7cc;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    margin-bottom: 12px;
+
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+
+    color: #ffffff;
+
+    padding-left: 5px;
+}
+
+
+/* ================= COPYRIGHT ================= */
+
+.copyright {
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.12);
+
+    text-align: center;
+
+    padding: 20px;
+
+    color: #000000;
+
+    font-size: 12px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .main-nav {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .reservation-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .footer-container {
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 40px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .header-inner {
+        min-height: 75px;
+    }
+
+    .logo img {
+
+        width: 50px;
+        height: 50px;
+    }
+
+    .brand-text h1 {
+        font-size: 17px;
+    }
+
+    .brand-text p {
+        font-size: 11px;
+    }
+
+    .reservation-hero {
+
+        padding: 55px 15px;
+    }
+
+    .reservation-hero h2 {
+
+        font-size: 30px;
+    }
+
+    .reservation-hero p {
+
+        font-size: 15px;
+    }
+
+    .reservation-section {
+
+        padding: 55px 0;
+    }
+
+    .reservation-info h2 {
+
+        font-size: 28px;
+    }
+
+    .form-row {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+    .reservation-card {
+
+        padding: 25px 20px;
+    }
+
+    .form-actions {
+
+        flex-direction: column;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+
+        width: 100%;
+    }
+
+    .footer-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding: 45px 0;
+    }
+}
+
+
+
+
+/* =====================================================
+   17. CONTACT
+===================================================== */
+
+.contact {
+    padding: 80px 0;
+    background-color: var(--noir);
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+}
+
+
+/* Informations contact */
+
+.contact-info {
+    background-color: var(--blanc);
+
+    color: #ffffff;
+
+    padding: 40px;
+
+    border-radius: 10px;
+
+    border-bottom: 5px solid var(--vert);
+}
+
+.contact-info h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.contact-info > p {
+    color: #e8f7ed;
+    margin-bottom: 25px;
+}
+
+.contact-item {
+    margin-top: 25px;
+}
+
+.contact-item strong {
+    display: block;
+
+    color: #ffffff;
+
+    margin-bottom: 5px;
+}
+
+.contact-item p {
+    color: #e8f7ed;
+}
+
+
+/* Formulaire contact */
+
+.contact-form {
+    background-color: #ffffff;
+
+    padding: 40px;
+
+    border-radius: 10px;
+
+    border-top: 5px solid var(--vert);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form h2 {
+    color: var(--vert-fonce);
+    margin-bottom: 25px;
+}
+/* =========================
+   BLOCS CONTACT ALIGNÉS
+========================= */
+
+.contact-infos {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto 70px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    align-items: stretch;
+}
+
+.contact-card {
+    background-color: #ffffff;
+
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+
+    padding: 25px 20px;
+
+    min-height: 190px;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+    border-top: 4px solid #16803c;
+}
+
+.contact-icon {
+    width: 45px;
+    height: 45px;
+
+    background-color: #16803c;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 6px;
+
+    font-size: 22px;
+
+    margin-bottom: 15px;
+}
+
+.contact-card h3 {
+    color: #16803c;
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.contact-card p {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+
+
+/* =====================================================
+   18. FOOTER
+===================================================== */
+
+footer {
+    background-color: var(--vert-fonce);
+    color: #ffffff;
+
+    border-top: 4px solid var(--vert);
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 50px 0;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+}
+
+.footer-container h3 {
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.footer-container p {
+    color: #e8f7ed;
+    margin-bottom: 8px;
+}
+
+.footer-container a {
+    color: #e8f7ed;
+}
+
+.footer-container a:hover {
+    color: #059729;
+}
+
+.footer-bottom {
+    text-align: center;
+
+    padding: 20px;
+
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.footer-bottom p {
+    color: #078e34;
+}
+
+
+
+/* =====================================================
+   19. RESPONSIVE TABLETTE
+===================================================== */
+
+@media (max-width: 992px) {
+
+    .vehicules-container {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =====================================================
+   20. RESPONSIVE TÉLÉPHONE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .header-container {
+        flex-direction: column;
+
+        padding: 20px 0;
+
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-content h2 {
+        font-size: 24px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .vehicule {
+        flex-direction: column;
+    }
+
+    .vehicule-image {
+        width: 100%;
+    }
+
+    .vehicule-info {
+        width: 100%;
+    }
+
+    .vehicule-image img {
+        height: 250px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mission-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full {
+        grid-column: auto;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =====================================================
+   21. PETITS ÉCRANS
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .logo h1 {
+        font-size: 23px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .page-banner h1 {
+        font-size: 35px;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .reservation-form,
+    .contact-form,
+    .contact-info {
+        padding: 25px;
+    }
+
+    .btn {
+        padding: 11px 18px;
+    }
+}
+.footer-btn {
+    display: inline-block;
+    background-color: #16803c;
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    width: 150px;
+    transition: 0.3s;
+}
+
+.footer-btn:hover {
+    background-color: #f2c300;
+    color: #123d25;
+    transform: translateX(5px);
+}
+
+.footer-liens h3 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.footer-liens a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 15px 0;
+    transition: 0.3s;
+}
+
+.footer-liens a:hover {
+    color: #b8f5c8;
+    text-decoration: underline;
+}
+.copyright {
+    background-color: #555555;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 14px;
+}
+/* =========================================
+   PAGE CONTACT
+   CASA TRANSPORT
+   VERT & BLANC
+========================================= */
+
+
+/* =========================================
+   HERO CONTACT
+========================================= */
+
+.contact-hero  {
+    height: 45vh;
+    background-image: url("casa4.jpeg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.contact-hero .container {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    color: white;
+    height: 100%;
+}
+
+
+
+.contact-hero span {
+
+    color: #c7f2d6;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+
+.contact-hero h2 {
+
+    font-size: 42px;
+
+    margin: 15px 0;
+}
+
+
+.contact-hero p {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    color: #e6f6ed;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   SECTION CONTACT
+========================================= */
+
+.contact-section {
+
+    background: #f5f8f6;
+
+    padding: 90px 0;
+}
+
+
+/* DEUX COLONNES */
+
+.contact-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        0.9fr 1.1fr;
+
+    gap: 60px;
+
+    align-items: start;
+}
+
+
+/* =========================================
+   INFORMATIONS
+========================================= */
+
+.contact-info {
+
+    padding-top: 10px;
+}
+
+
+.section-label {
+
+    color: #087443;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+.contact-info h2 {
+
+    color: #173b2a;
+
+    font-size: 38px;
+
+    line-height: 1.25;
+
+    margin: 15px 0 20px;
+}
+
+
+.contact-info > p {
+
+    color: #68766e;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================
+   CONTACT ITEM
+========================================= */
+
+.contact-item {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+/* ICÔNE */
+
+.contact-icon {
+
+    width: 45px;
+
+    height: 45px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #087443;
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 18px;
+}
+
+
+.contact-item h3 {
+
+    color: #173b2a;
+
+    font-size: 17px;
+
+    margin-bottom: 5px;
+
+    text-transform: uppercase;
+}
+
+
+.contact-item p {
+
+    color: #718078;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   RÉSEAUX SOCIAUX
+========================================= */
+
+.social-box {
+
+    margin-top: 30px;
+
+    padding: 22px;
+
+    background: white;
+
+    border-left:
+        4px solid #087443;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 70, 40, 0.07);
+}
+
+
+.social-box h3 {
+
+    color: #173b2a;
+
+    margin-bottom: 15px;
+}
+
+
+.social-links {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+
+.social-links span {
+
+    background: #eef8f2;
+
+    color: #087443;
+
+    padding: 8px 13px;
+
+    border-radius: 5px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   CARTE FORMULAIRE
+========================================= */
+
+.contact-card {
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    border:
+        1px solid #e0ebe4;
+
+    box-shadow:
+        0 15px 45px
+        rgba(0, 70, 40, 0.10);
+}
+
+
+/* =========================================
+   EN-TÊTE FORMULAIRE
+========================================= */
+
+.form-header {
+
+    margin-bottom: 30px;
+}
+
+
+.form-header h3 {
+
+    color: #173b2a;
+
+    font-size: 26px;
+
+    margin-bottom: 8px;
+}
+
+
+.form-header p {
+
+    color: #718078;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   FORMULAIRE
+========================================= */
+
+.form-group {
+
+    margin-bottom: 20px;
+}
+
+
+.form-group label {
+
+    display: block;
+
+    color: #30483b;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+
+/* INPUTS */
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+
+    width: 100%;
+
+    padding: 14px 15px;
+
+    border:
+        1px solid #d7e4dc;
+
+    border-radius: 7px;
+
+    background: #fafcfb;
+
+    color: #173b2a;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+
+.form-group textarea {
+
+    resize: vertical;
+}
+
+
+/* FOCUS */
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+
+    border-color: #087443;
+
+    background: white;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(8, 116, 67, 0.10);
+}
+
+
+/* =========================================
+   CHECKBOX
+========================================= */
+
+.form-check {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin-bottom: 25px;
+}
+
+
+.form-check input {
+
+    margin-top: 3px;
+
+    accent-color: #087443;
+}
+
+
+.form-check label {
+
+    color: #718078;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   BOUTON
+========================================= */
+
+.btn-contact {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #087443;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.btn-contact:hover {
+
+    background: #064b2d;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(0, 70, 40, 0.18);
+}
+
+
+/* =========================================
+   DESCRIPTION FINALE
+========================================= */
+
+.contact-description {
+
+    background: white;
+
+    padding: 85px 20px;
+
+    text-align: center;
+}
+
+
+.contact-description .container {
+
+    max-width: 850px;
+}
+
+
+.contact-description span {
+
+    color: #087443;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+
+.contact-description h2 {
+
+    color: #173b2a;
+
+    font-size: 35px;
+
+    margin: 15px 0 25px;
+}
+
+
+.contact-description p {
+
+    color: #68766e;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    margin-bottom: 17px;
+}
+
+
+/* =========================================
+   RESPONSIVE TABLETTE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .contact-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .contact-hero {
+
+        padding: 55px 15px;
+    }
+
+
+    .contact-hero h2 {
+
+        font-size: 32px;
+    }
+
+
+    .contact-hero p {
+
+        font-size: 15px;
+    }
+
+
+    .contact-section {
+
+        padding: 65px 0;
+    }
+
+
+    .contact-info h2 {
+
+        font-size: 29px;
+    }
+
+
+    .contact-card {
+
+        padding: 25px 20px;
+    }
+
+
+    .contact-description {
+
+        padding: 65px 20px;
+    }
+
+
+    .contact-description h2 {
+
+        font-size: 29px;
+    }
+
+
+    .social-links {
+
+        flex-direction: column;
+    }
+
+
+    .social-links span {
+
+        text-align: center;
+    }
+
+}
+
